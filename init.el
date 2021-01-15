@@ -32,6 +32,9 @@
 (require 'evil)
 (evil-mode 1)
 
+(setq load-path (cons (expand-file-name "") load-path))
+(require 'cmake-mode)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
