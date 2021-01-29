@@ -21,7 +21,17 @@
 (global-set-key (kbd "C-c C-x C v")
 		'do-org-show-all-images)
 
+(setq org-confirm-babel-evaluate nil)
 
+(org-babel-do-load-languages
+ 'org-babel-load-language
+ '((emacs-lisp . t)
+   (shell . t)
+   (python . t)
+   (julia . t)
+   (c++ . t)
+   (awk . t)
+   (sed . t)))
 ;; Set up package.el to work with MELPA
 (require 'package)
 (when (version<= "26.0.50" emacs-version )
