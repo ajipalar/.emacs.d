@@ -15,6 +15,13 @@
   (interactive)
   (message "Hello World!"))
 
+(defun do-org-show-all-images ()
+  (interactive)
+  (org-display-inline-images t t))
+(global-set-key (kbd "C-c C-x C v")
+		'do-org-show-all-images)
+
+
 ;; Set up package.el to work with MELPA
 (require 'package)
 (when (version<= "26.0.50" emacs-version )
@@ -32,7 +39,7 @@
 (require 'evil)
 (evil-mode 1)
 
-(setq load-path (cons (expand-file-name "") load-path))
+(setq load-path (cons (expand-file-name "/Users/ajipalar/Projects/tutorials/cmake_tutorial/CMake/Auxiliary/cmake-mode.el") load-path))
 (require 'cmake-mode)
 
 (custom-set-variables
