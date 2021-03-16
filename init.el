@@ -51,6 +51,7 @@
 
 (setq load-path (cons (expand-file-name "/Users/ajipalar/Projects/tutorials/cmake_tutorial/CMake/Auxiliary/cmake-mode.el") load-path))
 (require 'cmake-mode)
+(require 'rust-mode)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
