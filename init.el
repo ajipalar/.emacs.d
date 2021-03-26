@@ -1,3 +1,8 @@
+;;Update settings for lsp-mode
+(setq gc-cons-threshold 1000000)
+(setq read-processes-output-max (* 1024 1024)) ;; 1mb
+
+
 (defun my-put-file-name-on-clipboard ()
   "Put the current file name on the clipboard"
   (interactive)
@@ -22,6 +27,7 @@
 		'do-org-show-all-images)
 
 (setq org-confirm-babel-evaluate nil)
+
 
 (org-babel-do-load-languages
  'org-babel-load-language
@@ -61,8 +67,6 @@
 (require 'lsp-mode)
 (add-hook 'c++-mode-hook #'lsp)
 
-(global-set-key (kbd "<menu> v f") #'vimish-fold)
-(global-set-key (kbd "<menu> v v") #'vimish-fold-delete)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
