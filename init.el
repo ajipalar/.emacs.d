@@ -54,6 +54,13 @@
 (require 'rust-mode)
 (require 'vimish-fold)
 
+;;Enable lsp-mode
+;;if you want to change prefix for lsp-mode keybindings.
+(setq lsp-keymap-prefix "s-l")
+
+(require 'lsp-mode)
+(add-hook 'c++-mode-hook #'lsp)
+
 (global-set-key (kbd "<menu> v f") #'vimish-fold)
 (global-set-key (kbd "<menu> v v") #'vimish-fold-delete)
 (custom-set-variables
