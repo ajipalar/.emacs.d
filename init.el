@@ -1,7 +1,6 @@
 ;;Update settings for lsp-mode
 (setq gc-cons-threshold 1000000)
-(setq read-processes-output-max (* 1024 1024)) ;; 1mb
-
+(setq read-process-output-max (* 1024 1024)) ;; 1mb
 
 (defun my-put-file-name-on-clipboard ()
   "Put the current file name on the clipboard"
@@ -19,6 +18,16 @@
   "Hello World and you can call it via M-x hello."
   (interactive)
   (message "Hello World!"))
+(defun whats-up ()
+  "whats-up and you can call it via M-x whats-up."
+  (interactive)
+  (message "Not much. Sup with you?"))
+
+;; Source: http://www.emacswiki.org/emacs-en/download/misc-cmds.el
+(defun revert-buffer-no-confirm ()
+  "Revert buffer without confirmation."
+  (interactive)
+  (revert-buffer :ignore-aut :noconfirm))
 
 (defun do-org-show-all-images ()
   (interactive)
