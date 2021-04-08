@@ -23,6 +23,16 @@
   (interactive)
   (message "Not much. Sup with you?"))
 
+;;CEDET Collection of Emacs Development Environment Tools
+
+(require 'semantic)
+(global-semanticdb-minor-mode 1)
+(semantic-mode 1)
+(semantic-enable)
+
+;;Disable Python and HTML code semantic code completion
+
+
 ;; Source: http://www.emacswiki.org/emacs-en/download/misc-cmds.el
 (defun revert-buffer-no-confirm ()
   "Revert buffer without confirmation."
