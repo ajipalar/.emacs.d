@@ -1,4 +1,5 @@
 ;; packages
+
 (when (>= emacs-major-version 24)
   (require 'package)
   (package-initialize)
@@ -18,12 +19,19 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (add-to-list 'load-path "~/.emacs.d/themes/")
 (require 'color-theme-sanityinc-tomorrow)
+;;(load-theme 'sanityinc-tomorrow-night)
 
 ;;(load-theme 'zenburn)
 (load-theme 'sanityinc-tomorrow-night)
 ;;Turn on syntax heighlighting no matter the mode
 (global-font-lock-mode 1)
 
+;;Vimish-fold keybindings
+(global-set-key (kbd "C-c C-v") 'vimish-fold)
+(global-set-key (kbd "C-c C-r") 'vimish-fold-refold)       
+(global-set-key (kbd "C-c C-SPC") 'vimish-fold-unfold)       
+;;Line numbers
+(display-line-numbers-mode)
 
 (org-babel-do-load-languages
  'org-babel-load-language
@@ -55,7 +63,7 @@
  '(compilation-message-face 'default)
  '(custom-enabled-themes nil)
  '(custom-safe-themes
-   '("2f1f428d218b33970ae2a575338a8799ed454f17a69f81ee7c2d47e71f1e11cf" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "2cbd2a0d861fd6baf446f4393f3c5ed00ed861fe9c9073c87a7c8438ada877d4" default))
+   '("1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "2f1f428d218b33970ae2a575338a8799ed454f17a69f81ee7c2d47e71f1e11cf" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "2cbd2a0d861fd6baf446f4393f3c5ed00ed861fe9c9073c87a7c8438ada877d4" default))
  '(fci-rule-color "#383838")
  '(highlight-changes-colors '("#FD5FF0" "#AE81FF"))
  '(highlight-tail-colors
@@ -98,9 +106,6 @@
  '(weechat-color-list
    '(unspecified "#272822" "#3C3D37" "#F70057" "#F92672" "#86C30D" "#A6E22E" "#BEB244" "#E6DB74" "#40CAE4" "#66D9EF" "#FB35EA" "#FD5FF0" "#74DBCD" "#A1EFE4" "#F8F8F2" "#F8F8F0")))
 
-(global-set-key (kbd "C-c C-v") 'vimish-fold)
-(global-set-key (kbd "C-c C-r") 'vimish-fold-refold)       
-(global-set-key (kbd "C-c C-u") 'vimish-fold-unfold)       
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
